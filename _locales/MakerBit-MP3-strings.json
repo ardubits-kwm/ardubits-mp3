@@ -1,4 +1,4 @@
 {
-  "MP3.init_mp3|block": "初始化MP3模块RX%mp3RX TX%mp3TX",
+  "MP3.init_mp3|block": "初始化MP3模块RX%mp3RX | TX%mp3TX",
 
 }
