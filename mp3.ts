@@ -3,7 +3,7 @@
 
 //% weight=100 color=#64C800 icon="\u272a" block="MP3"
 namespace MP3 {
-    let commandBuffer: Buffer = undefined
+    let commandBuffer: Buffer = undefined;
 
     /**
      * init mp3
@@ -25,7 +25,7 @@ namespace MP3 {
     //% blockId="play_mp3" block="play mp3 %num"
     //% weight=50 
     export function play(num: number){
-        commandBuffer = pins.createBuffer(6);
+        commandBuffer = pins.createBuffer(6)
         commandBuffer.setNumber(NumberFormat.UInt8LE, 0, 0x7e)
         commandBuffer.setNumber(NumberFormat.UInt8LE, 1, 0x04)
         commandBuffer.setNumber(NumberFormat.UInt8LE, 2, 0x41)
