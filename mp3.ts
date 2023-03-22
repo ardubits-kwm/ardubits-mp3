@@ -17,7 +17,7 @@ namespace MP3 {
 
     /**
      * play mp3
-     */
+
     //% blockId="play_mp3" block="play mp3 %num"
     //% weight=50 
     export function play(num: number): void {
@@ -30,4 +30,5 @@ namespace MP3 {
         commandBuffer.setNumber(NumberFormat.UInt8LE, 5, 0xef);
         serial.writeBufferBlocking(commandBuffer)
     }
+     */
 }
