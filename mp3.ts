@@ -3,7 +3,7 @@
 
 //% weight=100 color=#64C800 icon="\u272a" block="MP3"
 namespace MP3 {
-    let commandBuffer: Buffer = undefined
+    let commandBuffer: Buffer = undefined;
 
     /**
      * init mp3
@@ -14,7 +14,7 @@ namespace MP3 {
     //% mp3TX.fieldEditor="gridpicker" mp3TX.fieldOptions.columns=3
     //% mp3TX.fieldOptions.tooltips="false"
     //% weight=50 
-    export function init_mp3(mp3RX: SerialPin, mp3TX: SerialPin){
+    export function init_mp3(mp3RX: SerialPin, mp3TX: SerialPin): void {
         serial.redirect(mp3RX as number,mp3TX as number,BaudRate.BaudRate9600)
     }
 
@@ -24,14 +24,14 @@ namespace MP3 {
      */
     //% blockId="play_mp3" block="play mp3 %num"
     //% weight=50 
-    export function play(num: number){
-        commandBuffer = pins.createBuffer(6)
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 0, 0x7e)
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 1, 0x04)
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 2, 0x41)
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 3, 0x00)
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 4, num)
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 5, 0xef)
+    export function play(num: number): void {
+        commandBuffer = pins.createBuffer(6);
+        commandBuffer.setNumber(NumberFormat.UInt8LE, 0, 0x7e);
+        commandBuffer.setNumber(NumberFormat.UInt8LE, 1, 0x04);
+        commandBuffer.setNumber(NumberFormat.UInt8LE, 2, 0x41);
+        commandBuffer.setNumber(NumberFormat.UInt8LE, 3, 0x00);
+        commandBuffer.setNumber(NumberFormat.UInt8LE, 4, num);
+        commandBuffer.setNumber(NumberFormat.UInt8LE, 5, 0xef);
         serial.writeBufferBlocking(commandBuffer)
     }
 }
