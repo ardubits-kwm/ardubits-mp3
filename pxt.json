@@ -8,8 +8,7 @@
     },
     "files": [
         "README.md",
-        "mp3.ts",
-        "_locales/zh/MakerBit-MP3-strings.json"
+        "mp3.ts"
     ],
     "testFiles": [
         "test.ts"
