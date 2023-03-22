@@ -8,7 +8,8 @@
     },
     "files": [
         "README.md",
-        "mp3.ts"
+        "mp3.ts",
+        "_locales/zh/ardubits-MP3-strings.json"
     ],
     "testFiles": [
         "test.ts"
