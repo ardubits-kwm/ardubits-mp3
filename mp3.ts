@@ -16,21 +16,5 @@ namespace MP3 {
     }
 
 
-    /**
-     * play mp3
 
-    //% blockId="play_mp3" block="play mp3 %num"
-    //% weight=50 
-    export function play(num: number):void{
-        commandBuffer = pins.createBuffer(6);
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 0, 0x7e);
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 1, 0x04);
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 2, 0x41);
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 3, 0x00);
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 4, num);
-        commandBuffer.setNumber(NumberFormat.UInt8LE, 5, 0xef);
-        serial.writeBufferBlocking(commandBuffer)
-
-    }
-     */
 }
