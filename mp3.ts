@@ -14,7 +14,7 @@ namespace MP3 {
     //% mp3TX.fieldEditor="gridpicker" mp3TX.fieldOptions.columns=3
     //% mp3TX.fieldOptions.tooltips="false"
     //% weight=50 
-    export function init_mp3(mp3RX: SerialPin, mp3TX: SerialPin):void {
+    export function init_mp3(mp3RX: SerialPin, mp3TX: SerialPin){
         serial.redirect(mp3RX as number,mp3TX as number,BaudRate.BaudRate9600)
     }
 
