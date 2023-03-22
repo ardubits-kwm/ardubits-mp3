@@ -3,7 +3,7 @@
 
 //% weight=100 color=#64C800 icon="\u272a" block="MP3"
 namespace MP3 {
-    let commandBuffer: Buffer = undefined;
+    let commandBuffer: Buffer = undefined
 
     /**
      * init mp3
@@ -33,6 +33,5 @@ namespace MP3 {
         commandBuffer.setNumber(NumberFormat.UInt8LE, 4, num)
         commandBuffer.setNumber(NumberFormat.UInt8LE, 5, 0xef)
         serial.writeBufferBlocking(commandBuffer)
-
     }
 }
