@@ -8,10 +8,10 @@ namespace MP3 {
     /**
      * init mp3
      */
-    //% block="init MP3|RX %mp3RX TX %mp3TX"
+    //% block="init MP3 RX: %rx TX: %tx"
     //% weight=50 
-    export function initMp3(mp3RX: SerialPin, mp3TX: SerialPin):void {
-        serial.redirect(mp3RX as number,mp3TX as number,BaudRate.BaudRate9600);
+    export function initMp3(rx: SerialPin, tx: SerialPin):void {
+        serial.redirect(rx as number,tx as number,BaudRate.BaudRate9600);
 
     }
 
