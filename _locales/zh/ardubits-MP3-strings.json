@@ -1,4 +1,5 @@
 {
   "MP3.initMp3|block": "初始化MP3模块RX: %rx TX: %tx",
+  "MP3.play|block": "MP3播放第%num首",
   "{id:category}MP3": "MP3"
 }
