@@ -3,7 +3,16 @@
 
 //% weight=100 color=#64C800 icon="\u272a" block="MP3"
 namespace MP3 {
-    let commandBuffer: Buffer = undefined
+    export enum PrevNext {
+        //% block=play
+        Play = 0x01,
+        //% block=stop
+        Stop = 0x02,
+        //% block=next
+        Next = 0x03,
+        //% block=prev
+        Prev = 0x04
+    }
 
 
 
@@ -17,11 +26,11 @@ namespace MP3 {
     }
 
     /**
-     * play mp3
+     * play mp3 number
      */
-    //% blockId="PLAY_MP3" block="play mp3 |%num"
+    //% blockId="PLAY_MP3_NUM" block="play mp3 number|%num"
     //% weight=49 
-    export function play(num: number): void{
+    export function playNum(num: number): void{
         let buf = pins.createBuffer(6);
         buf[0] = 0x7e;
         buf[1] = 0x04;
@@ -29,6 +38,20 @@ namespace MP3 {
         buf[3] = 0x00;
         buf[4] = num;
         buf[5] = 0xef;
+        serial.writeBuffer(buf);
+    }
+    
+    /**
+     * set mp3 
+     */
+    //% blockId="SET_MP3" block="set mp3 |%PrevNext"
+    //% weight=48 
+    export function setMp3(pn: PrevNext): void{
+        let buf = pins.createBuffer(4);
+        buf[0] = 0x7e;
+        buf[1] = 0x02;
+        buf[2] = pn;
+        buf[3] = 0xef;
         serial.writeBuffer(buf);
     }
 
