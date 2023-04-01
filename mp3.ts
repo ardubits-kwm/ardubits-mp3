@@ -11,9 +11,9 @@ namespace MP3 {
         //% block=next
         Next = 0x03,
         //% block=prev
-        Prev = 0x04
+        Prev = 0x04,
         //% block=volumnup
-        Volumnup = 0x05
+        Volumnup = 0x05,
         //% block=volumndown
         Volumndown = 0x06
     }
