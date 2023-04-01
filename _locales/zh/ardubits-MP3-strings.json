@@ -1,6 +1,6 @@
 {
   "MP3.initMp3|block": "初始化MP3模块RX|%rx TX|%tx",
-  "MP3.play|block": "MP3播放歌曲|%num",
+  "MP3.playNum|block": "MP3播放歌曲|%num",
   "MP3.setMp3|block": "设置MP3|%PrevNext",
   "MP3.PrevNext.Play|block": "播放",
   "MP3.PrevNext.Stop|block": "停止",
