@@ -1,4 +1,4 @@
-// MakerBit Serial MP3 blocks supporting Catalex Serial MP3 1.0
+// ArduBits Serial MP3 blocks supporting Catalex Serial MP3 1.0
 
 
 //% weight=100 color=#64C800 icon="\u272a" block="MP3"
