@@ -23,7 +23,7 @@ namespace MP3 {
     /**
      * init mp3
      */
-    //% blockId="INIT_MP3" block="init MP3 RX|%rx  TX|%tx"
+    //% blockId="INIT_MP3" block="init MP3 RX|%rx TX|%tx"
     //% weight=50 
     export function initMp3(rx: SerialPin, tx: SerialPin):void {
         serial.redirect(rx as number,tx as number,BaudRate.BaudRate9600)
