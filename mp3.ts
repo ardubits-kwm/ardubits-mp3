@@ -32,7 +32,7 @@ namespace MP3 {
     /**
      * play mp3 number
      */
-    //% blockId="PLAY_MP3_NUM" block="play mp3 number|%num"
+    //% blockId="PLAY_MP3_NUM" block="MP3 play number|%num"
     //% weight=49 
     export function playNum(num: number): void{
         let buf = pins.createBuffer(6);
@@ -48,7 +48,7 @@ namespace MP3 {
     /**
      * set mp3 
      */
-    //% blockId="SET_MP3" block="set mp3 |%PrevNext"
+    //% blockId="SET_MP3" block="set MP3 |%PrevNext"
     //% weight=48 
     export function setMp3(pn: PrevNext): void{
         let buf = pins.createBuffer(4);
