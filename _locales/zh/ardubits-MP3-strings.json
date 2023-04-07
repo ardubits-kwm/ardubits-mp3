@@ -8,4 +8,5 @@
   "MP3.PrevNext.Next|block": "下一首",
   "MP3.PrevNext.Volumnup|block": "音量加",
   "MP3.PrevNext.Volumndown|block": "音量减",
+  "{id:category}MP3": "MP3"
 }
